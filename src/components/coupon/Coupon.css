@@ -1,0 +1,95 @@
+.coupon-container {
+  background: #f9f9f9;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+.card-box {
+ background: #FFFFFF;
+  border-radius: 12px;
+  padding: 1.5rem;
+  margin-bottom: 2rem;
+  width: 100%;
+  /* max-width: 1009px; */
+  height: 234px;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.06);
+}
+
+.card-box h3 {
+  margin-bottom: 1rem;
+  color: #1f2937;
+  font-weight: 600;
+}
+
+.field-row {
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.input-section {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+.txt{
+    margin-top:0rem ;
+    margin-left: 1rem;
+    color: #4b5563;
+}
+
+.input-section label {
+  font-weight: 500;
+  margin-bottom: 0.5rem;
+  color: #1f2937;
+}
+
+.required {
+  color: red;
+}
+
+.dropdown {
+  border: 1px solid #e5e7eb;
+  border-radius: 10px;
+  padding: 0.75rem;
+  font-size: 1rem;
+  color: #4b5563;
+  outline: none;
+  width: 100%;
+  max-width: 500px;
+}
+
+.input-readonly {
+  flex: 1;
+  border: 1px solid #e5e7eb;
+  border-radius: 10px;
+  padding: 0.75rem;
+  font-size: 1rem;
+  color: #1f2937;
+  max-width: 500px;
+  width: 100%;
+  background-color: #f9fafb;
+}
+
+.green-btn {
+  width: 188px;
+height: 35px;
+border-radius: 8px;
+background: #3A643B;
+border: none;
+color: #FFFFFF;
+}
+.right{
+    float: right;
+}
+
+.green-btn:hover {
+  background-color: #264a2b;
+}
+
+.note {
+  font-size: 0.875rem;
+  color: #4b5563;
+  margin-top: 1rem;
+}

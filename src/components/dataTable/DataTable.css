@@ -1,0 +1,119 @@
+.referral-card {
+  background: #fff;
+  border-radius: 12px;
+  padding: 20px;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.05);
+  font-family: "Inter", sans-serif;
+  margin-top: 2rem;
+}
+
+.referral-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+  gap: 1rem;
+}
+
+.referral-header h2 {
+  font-size: 18px;
+  font-weight: 600;
+  color: #1e1e1e;
+}
+
+.search-tools {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+.search-tools input {
+  padding: 8px 14px;
+  border: none;
+  border-radius: 10px;
+  background-color: #f4f4f7;
+  color: #6b6b6b;
+  font-size: 14px;
+}
+
+.search-tools button {
+  border: none;
+  background-color: transparent;
+  width: 37px;
+  height: 37px;
+}
+
+
+.referral-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.referral-table th,
+.referral-table td {
+  padding: 12px;
+  text-align: left;
+  font-size: 14px;
+  color: #3d3d3d;
+}
+
+.profile-cell {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  position: relative;
+}
+
+.profile-cell img {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+}
+
+.new-badge {
+  background-color: #ffeccc;
+  color: #ffa500;
+  font-size: 10px;
+  padding: 2px 6px;
+  border-radius: 6px;
+  margin-left: 6px;
+}
+
+.table-footer {
+  margin-top: 15px;
+  display: flex;
+  justify-content: space-between;
+  font-size: 13px;
+  color: #888;
+}
+
+.pagination button {
+  border: none;
+  background: #f4f4f7;
+  padding: 6px 10px;
+  border-radius: 6px;
+  margin-left: 5px;
+  cursor: pointer;
+}
+
+.search-container input{
+    width: 260px;
+    height: 37px;
+}
+.search-container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    gap: 1.5rem;
+}
+
+.search-container #icon{
+    position: absolute;
+    left: 40%;
+    top: 50%;
+    transform: translateY(-50%);
+}
+#page{
+  margin-right: 2rem;
+}

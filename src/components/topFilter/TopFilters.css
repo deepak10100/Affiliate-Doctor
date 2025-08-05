@@ -1,0 +1,41 @@
+.tabs-container {
+  display: flex;
+  justify-content: space-around;
+  background-color: #FFFFFF;
+  padding: 12px 20px;
+  border-radius: 16px;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.tab-button {
+  position: relative;
+  background: transparent;
+  border: none;
+  outline: none;
+  font-size: 18px;
+  color: #7e7e7e;
+  font-weight: 500;
+  cursor: pointer;
+  padding: 10px 16px;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+}
+
+
+
+.tab-button.active {
+  color: #2b4d2b; /* green */
+  font-weight: 600;
+}
+
+.underline {
+  position: absolute;
+  bottom: 4px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 60%;
+  height: 2px;
+  background-color: #2b4d2b; /* green underline */
+  border-radius: 1px;
+}
