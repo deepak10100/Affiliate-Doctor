@@ -11,14 +11,15 @@ function Coupon() {
   };
    const location = useLocation();
     const currentPath = location.pathname;
+    
   return (
     <>
      <div className="coupon-container">
  <div className="url-path">
 
-          <p className="path-text">{`Aflilate > ${currentPath.split('/')[1]}`}</p>
+          <p className="path-text">{`Aflilate > ${currentPath.split('/')[1]} Tool `}</p>
         </div>
-      {/* Product Link/Coupon Section */}
+      
       <div className="card-box">
         <h3>Product Link/Coupon</h3>
         <div className="field-row">
@@ -39,7 +40,7 @@ function Coupon() {
           <button className="green-btn right">Get</button>
       </div>
 
-      {/* Cart Discount Section */}
+    
       <div className="card-box">
         <h3>Cart Discount</h3>
         <div className="field-row">

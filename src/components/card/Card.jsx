@@ -1,6 +1,5 @@
 import React from 'react'
 import './Card.css'
-import { FaCalendarAlt } from "react-icons/fa";
 function Card({title,amount,icon}) {
  
   return (

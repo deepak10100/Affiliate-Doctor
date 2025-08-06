@@ -93,3 +93,50 @@ color: #FFFFFF;
   color: #4b5563;
   margin-top: 1rem;
 }
+@media (max-width: 768px) {
+  .field-row {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 1rem;
+  }
+
+  .right {
+    float: none;
+    align-self: flex-end;
+  }
+
+  .green-btn {
+    margin-top: 1rem;
+    width: 100%;
+  }
+
+  .txt {
+    margin-left: 0;
+  }
+}
+
+
+@media (max-width: 480px) {
+  .input-section {
+    min-width: 100%;
+  }
+
+  .dropdown,
+  .input-readonly {
+    padding: 0.6rem;
+    font-size: 0.95rem;
+  }
+
+  .green-btn {
+    font-size: 0.95rem;
+    height: 40px;
+  }
+
+  .card-box {
+    padding: 1rem;
+  }
+
+  .card-box h3 {
+    font-size: 1rem;
+  }
+}

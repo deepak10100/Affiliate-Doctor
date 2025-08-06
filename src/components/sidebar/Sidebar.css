@@ -6,14 +6,13 @@
   overflow-y: auto;
   box-shadow: 5px 20px 14px 0px #2E37A40D;
   border-radius: 0 2rem 0 0;
-  transition: all 0.3s ease;
+  transition: left 0.3s ease;
   position: sticky;
   top: 0;
   z-index: 100;
   scrollbar-width: thin;
   scrollbar-color: #CCCCCC #f1f1f1;
 }
-
 
 .sidebar::-webkit-scrollbar {
   width: 6px;
@@ -44,38 +43,38 @@
   margin: 0;
 }
 
-li a{
-  color: #797979;
-}
 .sidebar-menu li {
   display: flex;
   align-items: center;
   gap: 1rem;
   font-size: 15px;
   color: #797979;
-  padding: 0.75rem .5rem;
+  padding: 0.75rem 0.5rem;
   border-radius: 0.75rem;
   cursor: pointer;
   transition: all 0.3s ease;
   font-weight: 500;
 }
-.sidebar-submenu li a{
-    color: #797979;
-}
-
-
-
-.sidebar-menu .icon {
-  width: 40px;
-  height: 40px;
-  color: #aaa;
-}
-
-.sidebar-dropdown {
+.menu{
   display: flex;
   justify-content: space-between;
   align-items: center;
-  font-weight: 500;
+}
+  .sidebar-toggle {
+  display: none;
+ background-color: transparent;
+  
+  border: none;
+ 
+  
+  margin: 10px;
+  cursor: pointer;
+  font-size: 2rem;
+}
+
+.sidebar-menu li a {
+  color: #797979;
+  text-decoration: none;
 }
 
 .sidebar-submenu {
@@ -92,13 +91,28 @@ li a{
   padding: 0.5rem;
   border-radius: 0.5rem;
 }
-.sidebar-menu a{
-    text-decoration: none;
+
+.sidebar-submenu li a {
+  color: #797979;
+  text-decoration: none;
 }
+
 .sidebar-submenu .active {
   color: #2d7a46;
   font-weight: bold;
- 
+}
+
+.sidebar-menu .icon {
+  width: 40px;
+  height: 40px;
+  color: #aaa;
+}
+
+.sidebar-dropdown {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-weight: 500;
 }
 
 .green {
@@ -110,7 +124,7 @@ li a{
   font-size: 0.8rem;
 }
 
-/* Responsive Layout */
+
 @media (max-width: 1024px) {
   .sidebar {
     width: 200px;
@@ -129,39 +143,33 @@ li a{
   }
 }
 
+
 @media (max-width: 768px) {
   .sidebar {
     position: fixed;
-    left: -100%;
     top: 0;
-    height: 100%;
-    width: 220px;
-    z-index: 2000;
+    left: -100%;
+    width: 230px;
+    height: 100vh;
     background: #fff;
-    border-radius: 0;
-    box-shadow: 2px 0 6px rgba(0,0,0,0.1);
+    padding: 1.5rem 1rem;
+    box-shadow: 5px 20px 14px 0px rgba(0, 0, 0, 0.1);
+    transition: left 0.3s ease-in-out;
+    z-index: 1000;
   }
 
   .sidebar.open {
     left: 0;
   }
-}
 
-/* Optional: Toggle button for mobile */
-.sidebar-toggle {
-  display: none;
-}
-
-@media (max-width: 768px) {
   .sidebar-toggle {
     display: block;
-    position: fixed;
-    top: 1rem;
-    left: 1rem;
-    background-color: #2d7a46;
-    color: #fff;
-    padding: 0.5rem;
-    border-radius: 0.5rem;
-    z-index: 3000;
   }
+  body.sidebar-open {
+    overflow: hidden; 
+  }
+
+
 }
+
+

@@ -10,13 +10,13 @@ import ProductLink from './components/productLinks/ProductLink.jsx';
 import AffiliateModal from './components/Affiliatemodal/AffiliateIntroModal.jsx';
 
 function App() {
-    const [showModal, setShowModal] = useState(true); // 👈 modal toggle
-
+    const [showModal, setShowModal] = useState(true);
+const [sidebarOpen, setSidebarOpen] = useState(false); 
   return (
     <BrowserRouter>
-    <Navbar />
+    <Navbar sidebarOpen={sidebarOpen} onclick={() => setSidebarOpen(!sidebarOpen)} />
       <div className="app-container">
-        <Sidebar />
+        <Sidebar sidebarOpen={sidebarOpen} onclick={() => setSidebarOpen(!sidebarOpen)}/>
         <main className="main-content">
           <Routes>
             <Route path="/dashboard" element={<Dashboard />} />

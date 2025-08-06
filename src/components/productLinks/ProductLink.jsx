@@ -6,7 +6,6 @@ function ProductLink() {
    const [product] = useState("Amrutam Nari Sondarya Malt");
   const [link] = useState("https://www.amrutam.global//nari-sondarya-malt?");
   const [coupon] = useState("AMU7382478");
-//  const [selectedProduct, setSelectedProduct] = useState('');
   const [couponCode] = useState('DRLIAM2374');
 
   const handleCopy = () => {

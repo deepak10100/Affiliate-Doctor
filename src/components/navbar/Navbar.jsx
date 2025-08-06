@@ -2,18 +2,18 @@ import React from 'react'
 import {  NavLink } from "react-router-dom";
 import './Navbar.css'
 
-function Navbar() {
-
+function Navbar({onclick}) {
+  
   return (
     <>
    <nav className="navbar">
-      {/* Left */}
+     
       <div className="navbar-left">
         <div className="logo"><NavLink to={'/'}>
           <img src="./logo.png" alt="" srcset="" />
           </NavLink></div>
 
-        <button className="menu-icon">
+        <button onClick={onclick} className="menu-icon">
           <img src="./menu.svg
           " alt="" srcset="" />
         </button>
@@ -24,7 +24,7 @@ function Navbar() {
         </div>
       </div>
 
-      {/* Right */}
+     
       <div className="navbar-right">
         <div className=" icon mail">
           <img src="./msg.svg" className='icon' alt="" srcset="" />
@@ -41,7 +41,7 @@ function Navbar() {
         </div>
 
         <img
-          src="./person.png" // Replace with actual image
+          src="./person.png" 
           alt="User"
           className="user-img"
         />

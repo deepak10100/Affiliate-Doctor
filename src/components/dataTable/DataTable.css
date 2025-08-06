@@ -11,8 +11,16 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-bottom: 20px;
+  flex-wrap: wrap;
   gap: 1rem;
+  padding: 1rem 0;
+
+}
+.content{
+      display: flex;
+ 
+  gap: 1rem;
+  align-items: center;
 }
 
 .referral-header h2 {
@@ -25,6 +33,8 @@
   display: flex;
   gap: 10px;
   align-items: center;
+ 
+  
 }
 
 .search-tools input {
@@ -88,24 +98,26 @@
 }
 
 .pagination button {
-  border: none;
-  background: #f4f4f7;
-  padding: 6px 10px;
-  border-radius: 6px;
-  margin-left: 5px;
+ border: 1px solid #E4E4E4;
+    padding: 6px 10px;
+    border-radius: 6px;
+    margin-left: 5px;
+    cursor: pointer;
+    background: transparent;
+}
+button{
   cursor: pointer;
 }
 
 .search-container input{
-    width: 260px;
+   
     height: 37px;
 }
-.search-container{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    position: relative;
-    gap: 1.5rem;
+.search-container {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 0.5rem;
 }
 
 .search-container #icon{
@@ -117,3 +129,106 @@
 #page{
   margin-right: 2rem;
 }
+.search-container .heading h2 {
+  font-size: 1.2rem;
+  margin-right: 1rem;
+}
+
+
+
+@media (max-width: 1536px) {
+
+   .table-responsive {
+    overflow-x: auto;
+    width: 100%;
+  }
+
+  .referral-table {
+    width: 100%;
+    min-width: 900px; 
+  }
+}
+
+@media (max-width: 1280px) {
+ 
+
+ 
+}
+
+@media (max-width: 1024px) {
+
+.referral-header{
+    flex-direction: column;
+  }
+  .search-container{
+    flex-direction: column;
+  }
+  .search-container #icon {
+    position: absolute;
+    left: 6%;
+    top: 73%;
+    transform: translateY(-50%);
+}
+}
+
+@media (max-width: 768px) {
+
+.search-tools{
+  display: flex;
+  gap: 10px;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+
+.content{
+  display: flex;
+}
+  .referral-table th,
+  .referral-table td {
+    font-size: 12px;
+    padding: 8px;
+  }
+
+  .pagination button {
+    padding: 5px 8px;
+    font-size: 12px;
+  }
+
+  #page {
+    margin-right: 0;
+  }
+  
+}
+
+@media (max-width: 640px) {
+  .referral-card {
+    padding: 16px;
+  }
+
+  .referral-header h2 {
+    font-size: 16px;
+  }
+ 
+
+  
+
+  .profile-cell {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .table-footer {
+    font-size: 12px;
+  }
+
+  .new-badge {
+    font-size: 9px;
+  }
+
+  .search-container {
+    gap: 1rem;
+  }
+}
+
+

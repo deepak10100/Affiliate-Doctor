@@ -1,20 +1,33 @@
 .d-metric-card {
   display: flex;
-  gap: 95px;
-  margin-top: 1rem;
+  gap: 12px;
   justify-content: center;
   align-items: center;
+  flex-wrap: wrap; 
+  margin-top: 1rem;
 }
+
 .url-path {
- 
   padding: 0.5rem 1rem;
   font-size: 18px;
   font-weight: 500;
-  color: #797979; /* gray-700 */
-
+  color: #797979;
 }
 
 .path-text {
   margin: 0;
   text-transform: capitalize;
+}
+
+@media (max-width: 640px) {
+  .d-metric-card {
+    flex-direction: column;
+    gap: 1rem;
+    align-items: stretch;
+  }
+
+  .url-path {
+    font-size: 16px;
+    text-align: center;
+  }
 }

@@ -22,10 +22,8 @@
   transition: all 0.3s ease;
 }
 
-
-
 .tab-button.active {
-  color: #2b4d2b; /* green */
+  color: #2b4d2b; 
   font-weight: 600;
 }
 
@@ -36,6 +34,37 @@
   transform: translateX(-50%);
   width: 60%;
   height: 2px;
-  background-color: #2b4d2b; /* green underline */
+  background-color: #2b4d2b;
   border-radius: 1px;
+}
+
+
+@media (max-width: 640px) {
+  .tabs-container {
+    align-items: stretch;
+    padding: 8px 12px;
+  }
+
+  .tab-button {
+    font-size: 16px;
+    padding: 8px 12px;
+    text-align: left;
+  }
+  .underline{
+    display: none;
+  }
+}
+
+
+@media (max-width: 768px) {
+  .tab-button {
+    font-size: 16px;
+  }
+}
+
+
+@media (max-width: 1024px) {
+  .tab-button {
+    font-size: 17px;
+  }
 }

@@ -1,7 +1,8 @@
-import React from 'react'
+import React, { useState } from 'react'
 import './DataTable.css'
-import { FaSyncAlt, FaArrowDown, FaFilter } from "react-icons/fa";
+import { IoIosArrowBack, IoIosArrowForward } from "react-icons/io";
 function DataTable() {
+  
 const data = [
   {
     id: 1,
@@ -41,20 +42,31 @@ const data = [
     image: "https://randomuser.me/api/portraits/men/3.jpg",
   },
 ];
-
+ const [searchTerm, setSearchTerm] = useState('');
+ const [refreshData, setRefreshData] = useState(data);
+ const handleRefresh = () => {
+    setSearchTerm(""); // search bhi reset ho jaye
+    setRefreshData(data);
+  };
+  const filteredData = data.filter(item =>
+    item.name.toLowerCase().includes(searchTerm.toLowerCase())
+  );
   return (
     <>
     
-     <div className="referral-card">
+     <div className="referral-card table-responsive">
       <div className="referral-header">
        
         <div className="search-container">
           <div className="heading">
              <h2>Referral Overview</h2>
           </div>
-          <img alt="" id='icon' srcset="" src="./form.svg"/>
-          <input placeholder="Search here" type="text"/>
-          <button className="refresh-btn"><img src="./reload.png" alt="" srcset="" /></button>
+         <div className="content">
+           <img alt="" id='icon' srcset="" src="./form.svg"/>
+          <input placeholder="Search Name" type="text"  value={searchTerm}
+                onChange={(e) => setSearchTerm(e.target.value)}/>
+          <button onClick={handleRefresh} className="refresh-btn"><img src="./reload.png" alt="" srcset="" /></button>
+         </div>
           </div>
         <div className="search-tools">
           <button className="sort-btn"><img src="./Sort by.png" alt="" srcset="" /></button>
@@ -77,7 +89,16 @@ const data = [
           </tr>
         </thead>
         <tbody>
-          {data.map((row, i) => (
+          {
+          filteredData.length === 0 ? (
+              <tr>
+                <td colSpan="10" style={{ textAlign: 'center', padding: '20px' }}>
+                  No results found
+                </td>
+              </tr>
+            ):
+          
+         ( filteredData.map((row, i) => (
             <tr key={row.id}>
               <td><input type="checkbox" /></td>
               <td>{i + 1}.</td>
@@ -96,15 +117,15 @@ const data = [
               <td>{row.orders}</td>
               <td>{row.revenue}</td>
             </tr>
-          ))}
+          )))}
         </tbody>
       </table>
       <div className="table-footer">
         <span>Rows per page: 8</span>
         <div className="pagination">
         <span id='page' >1-8 of 80</span>
-          <button>◀</button>
-          <button>▶</button>
+          <button><IoIosArrowBack/> </button>
+          <button> <IoIosArrowForward/> </button>
         </div>
       </div>
     </div>

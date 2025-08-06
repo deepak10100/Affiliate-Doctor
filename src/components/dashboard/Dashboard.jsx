@@ -3,13 +3,13 @@ import TopFilters from '../topFilter/TopFilter';
 import Card from '../card/Card';
 import DataTable from '../dataTable/DataTable';
 import { useLocation } from 'react-router-dom';
- // 👈 import modal
+
 import './Dashboard.css';
 
 function Dashboard() {
   const location = useLocation();
   const currentPath = location.pathname;
-   // 👈 modal toggle
+ 
   return (
     <>
       <div className="url-path">
